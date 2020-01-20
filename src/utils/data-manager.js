@@ -436,6 +436,7 @@ export default class DataManager {
 
   sortList(list) {
     const columnDef = this.columns.find(_ => _.tableData.id === this.orderBy);
+    console.dir(columnDef);
     let result = list;
 
     if (columnDef.customSort) {
