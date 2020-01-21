@@ -5,6 +5,7 @@
     "plugin:react/recommended"
   ],
   "rules": {
+    "no-console": "off",
     "one-var": "off",
     "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
     "space-before-function-paren": ["error", "never"]
