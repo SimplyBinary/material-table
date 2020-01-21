@@ -767,6 +767,8 @@ export default class DataManager {
         .sort((col1, col2) => col1.tableData.groupOrder - col2.tableData.groupOrder);
 
       const sortGroups = (list, columnDef) => {
+        console.log("!!!! In sortGroups");
+        console.dir(columnDef);
         if (columnDef.customSort) {
           return list.sort(
             columnDef.tableData.groupSort === 'desc'
