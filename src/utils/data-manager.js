@@ -439,6 +439,10 @@ export default class DataManager {
     console.dir(columnDef);
     let result = list;
 
+    if(!columnDef) {
+      return result;
+    }
+
     if (columnDef.customSort) {
       if (this.orderDirection === 'desc') {
         result = list.sort((a, b) => columnDef.customSort(b, a, 'row'));
@@ -769,6 +773,11 @@ export default class DataManager {
       const sortGroups = (list, columnDef) => {
         console.log("!!!! In sortGroups");
         console.dir(columnDef);
+
+        if(!columnDef) {
+          return list;
+        }
+
         if (columnDef.customSort) {
           return list.sort(
             columnDef.tableData.groupSort === 'desc'

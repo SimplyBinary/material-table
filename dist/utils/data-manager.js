@@ -655,6 +655,10 @@ function () {
       console.dir(columnDef);
       var result = list;
 
+      if (!columnDef) {
+        return result;
+      }
+
       if (columnDef.customSort) {
         if (this.orderDirection === 'desc') {
           result = list.sort(function (a, b) {
@@ -859,6 +863,13 @@ function () {
         });
 
         var sortGroups = function sortGroups(list, columnDef) {
+          console.log("!!!! In sortGroups");
+          console.dir(columnDef);
+
+          if (!columnDef) {
+            return list;
+          }
+
           if (columnDef.customSort) {
             return list.sort(columnDef.tableData.groupSort === 'desc' ? function (a, b) {
               return columnDef.customSort(b.value, a.value, 'group');
