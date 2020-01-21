@@ -26,6 +26,8 @@ const styles = theme => ({
   }
 });
 
+console.log("Using forked copy");
+
 
 export default withStyles(styles, { withTheme: true })(props => <MaterialTable {...props} ref={props.tableRef} />);
 export * from './components';

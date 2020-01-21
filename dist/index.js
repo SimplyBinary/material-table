@@ -63,6 +63,8 @@ var styles = function styles(theme) {
   };
 };
 
+console.log("Using forked copy");
+
 var _default = (0, _withStyles["default"])(styles, {
   withTheme: true
 })(function (props) {
